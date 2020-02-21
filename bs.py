@@ -1,9 +1,7 @@
-import os
 from bs4 import BeautifulSoup
 import requests
 from selenium import webdriver
 import re,time
-import selenium.webdriver.support.ui as ui
 
 driver=webdriver.Chrome(executable_path="C:/python3.8/chromedriver")
 driver.get("https://www.icourse163.org/spoc/university/SEU?_trace_c_p_k2_=714ebe082b464ec385e1d9f428ea1846#/c")
@@ -29,5 +27,5 @@ for _ in range(23):
     if _==22:
         break
     else:
-        driver.find_element_by_xpath("//a[contains(text(),'下一页')]").click()
+        driver.find_element_by_xpath("//a[contains(text(),'下一页')]").click()#对于auto-id使用contains(a,b)
 print("over")
